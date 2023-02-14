@@ -1,0 +1,155 @@
+/traversing a singly linkedlist//
+// #include<iostream>
+// using namespace std;
+// struct node{
+// int data;
+// struct node *next;
+// };
+
+// void print(node *&head){
+//   node *temp=head;
+//   while (temp!=NULL)
+//   {
+//     cout<<temp->data<<endl;
+//     temp=temp->next;
+//   }
+// }
+
+// int main(){
+//     struct node *head;
+// struct node *one=NULL;
+// struct node *two=NULL;
+// struct node *three=NULL;
+
+// one =new node();
+// two =new node();
+// three=new node();
+
+// one->data=1;
+// two->data=2;
+// three->data=3;
+
+// one->next=two;
+// two->next=three;
+// three->next=NULL;
+
+// head=one;
+// print(head);
+// }
+//singly linked list operations//
+// #include<iostream>
+// using namespace std;
+
+// class node{
+// public:
+// int data;
+// node *next;
+// };
+
+// void insertatmiddle(node *prevnode,int position,int x){
+// if (prevnode==NULL)
+// {
+//     return;
+// }
+// else
+// {
+//     node *newnode=new node();
+//     newnode->data=x;
+//     newnode->next=prevnode->next;
+//     prevnode->next=newnode;
+// }
+// }
+
+// void insertatend(node *&head,int x){
+// node *newnode=new node();
+// newnode->data=x;
+// newnode->next=NULL;
+// node *temp=head;
+// while (temp->next!=NULL)
+// {
+//     temp=temp->next;
+// }
+// temp->next=newnode;
+
+// }
+// void insertatbegin(node *&head,int x){
+//         node *temp=new node();
+//         temp->data=x;
+//             temp->next=head;
+//         head=temp;
+// }
+
+// void deleteatfirst(node *&head){
+// if (head==NULL)
+// {
+//     return;
+// }
+//  node *temp=head;
+//  head=head->next;
+//  delete temp;
+// }
+
+// void deleteatend(node *&head){
+//  if (head==NULL)
+// {
+//     return;
+// }
+// node *temp=head;
+// node *prevnode=NULL;
+// while (temp->next!=NULL)
+// {
+//     prevnode=temp;
+//     temp=temp->next;
+// }
+// delete temp;
+// prevnode->next=NULL;
+// }
+
+// void deletefrommid(node *&head,int position){
+// node *temp=head;
+// node *prev=head;
+// for(int i = 0; i < position; i++)
+//     {
+//         if(i == 0 && position == 1) 
+//         {
+//             head = head->next;
+//             free(temp);
+//         }
+//         else
+//         {
+//             if (i == position - 1 && temp)
+//             {
+//                 prev->next = temp->next;
+//                 free(temp);
+//             }
+//             else
+//             {
+//                 prev = temp;
+//                 if(prev == NULL) // position was greater than number of nodes in the list
+//                     break;
+//                 temp = temp->next; 
+//             }
+//         }
+//     }
+// }
+// void print(node *&head){
+// node *temp=head;
+// while (temp!=NULL)
+// {
+//     cout<<temp->data<<endl;
+//     temp=temp->next;
+// }
+// }
+// int main()
+// {
+
+// node *head=NULL;
+// insertatbegin(head,5);
+// insertatbegin(head,10);
+// insertatbegin(head,15);
+// insertatbegin(head,20);
+// deletefrommid(head,2);
+// // deleteatfirst(head);
+// // deleteatend(head);
+// print(head);
+// }
